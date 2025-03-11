@@ -38,17 +38,17 @@ func (i *Investor) GetAssetPosition(assetID string) *InvestorAssetPosition {
 }
 
 type InvestorAssetPosition struct {
-	AssetID   string
-	QntShares int
+	AssetID string
+	Shares  int
 }
 
 func NewInvestorAssetPosition(assetID string, qtdShares int) *InvestorAssetPosition {
 	return &InvestorAssetPosition{
-		AssetID:   assetID,
-		QntShares: qtdShares,
+		AssetID: assetID,
+		Shares:  qtdShares,
 	}
 }
 
-func (iap *InvestorAssetPosition) AddShares(qnd int) {
-	iap.QntShares += qnd
+func (iap *InvestorAssetPosition) AddShares(qtd int) {
+	iap.Shares += qtd
 }
